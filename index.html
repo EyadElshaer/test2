@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Brand Metadata -->
+  <title>Nexifing — Bespoke Web Design & High-Performance Digital Studio</title>
+  <meta name="description" content="Nexifing engineers modern, high-converting, and lightning-fast websites for ambitious brands and founders. Clutter-free. Smooth on all hardware." />
+  <meta name="keywords" content="Nexifing, web design, bespoke websites, premikeys, front-end development, ecommerce web development, lag-free websites" />
+  <meta name="author" content="Nexifing" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nexifing — High-Performance Web Studio" />
+  <meta property="og:description" content="We engineer websites that launch brands forward. Direct 1-on-1 WhatsApp collaboration." />
+  <meta property="og:image" content="./assets/nexifing-logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon.png" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Background & Nexifing Diagonal Trajectory Beams -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="nexifing-trajectory"></div>
+    <div class="nexifing-trajectory-2"></div>
+  </div>
+
+  <!-- Top Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+
+  <!-- ==================== FLOATING HEADER ==================== -->
+  <header class="header-wrapper" id="main-header">
+    <div class="navbar">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" aria-label="Nexifing Home">
+        <img src="./assets/nexifing-logo-dark.png" alt="Nexifing Logo" class="nav-logo-img nav-logo-dark" />
+        <img src="./assets/nexifing-logo.png" alt="Nexifing Logo" class="nav-logo-img nav-logo-light" />
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">Studio</a>
+        <a href="#portfolio" class="nav-link">Selected Work</a>
+        <a href="#services" class="nav-link">Capabilities</a>
+        <a href="#standard" class="nav-link">The Standard</a>
+        <a href="#calculator" class="nav-link">Scope Estimator</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon-pill" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Direct WhatsApp CTA Button -->
+        <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn-nav-whatsapp">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Mobile Menu">
+          <div class="hamburger-lines">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#about">Studio</a>
+      <a href="#portfolio">Selected Work</a>
+      <a href="#services">Capabilities</a>
+      <a href="#standard">The Standard</a>
+      <a href="#calculator">Scope Estimator</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 700;">
+        💬 Chat on WhatsApp (+201202000210) →
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      
+      <!-- Studio Beacon Badge -->
+      <div class="hero-badge-wrap reveal">
+        <span class="pulse-beacon"></span>
+        <span>Nexifing Studio • Accepting Q4 2026 Builds</span>
+      </div>
+
+      <!-- Main Editorial Headline -->
+      <h1 class="hero-main-title reveal">
+        We Engineer Websites That <span class="gradient-text-nex">Launch Brands</span> Forward.
+      </h1>
+
+      <!-- Value Subtext -->
+      <p class="hero-lead-text reveal">
+        Nexifing is a digital craft studio designing bespoke, high-converting websites and digital storefronts for founders who refuse cookie-cutter templates. Fast, uncluttered, and silky smooth on any hardware.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="hero-cta-flex reveal">
+        <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I%20am%20ready%20to%20build%20my%20new%20website." target="_blank" rel="noopener noreferrer" class="btn-nex-primary">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+          </svg>
+          <span>Chat on WhatsApp (+201202000210)</span>
+        </a>
+
+        <a href="#portfolio" class="btn-nex-ghost">
+          <span>Explore Past Work</span>
+          <span>↓</span>
+        </a>
+      </div>
+
+      <!-- Creative Feature: WhatsApp Quick-Launch Chips -->
+      <div class="hero-quick-presets reveal">
+        <span class="preset-intro-label">⚡ Click to auto-start chat with custom intent:</span>
+        <div class="preset-chips-track">
+          <button class="preset-chip" data-preset="Hi Nexifing! I'd like to build an E-Commerce platform similar to PremiKeys.">
+            <span>🛒 E-Commerce Store (like PremiKeys)</span>
+          </button>
+          <button class="preset-chip" data-preset="Hi Nexifing! I need a high-converting Landing Page for my business.">
+            <span>🚀 High-Converting Landing Page</span>
+          </button>
+          <button class="preset-chip" data-preset="Hi Nexifing! I want to redesign my existing website to be modern and faster.">
+            <span>🎨 Brand Redesign & Speedup</span>
+          </button>
+          <button class="preset-chip" data-preset="Hi Nexifing! I have a custom web application idea I would like to discuss.">
+            <span>⚡ Custom Web Application</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ticker Stats -->
+    <div class="hero-ticker-container">
+      <div class="ticker-motion">
+        <div class="ticker-block">
+          <span class="ticker-val cyan">&lt; 0.8s</span>
+          <span class="ticker-sub">Sub-Second Global Latency</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val">100%</span>
+          <span class="ticker-sub">Bespoke Clean Code</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val indigo">60–120 FPS</span>
+          <span class="ticker-sub">Lag-Free on Old Hardware</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val cyan">Direct Line</span>
+          <span class="ticker-sub">WhatsApp 1-on-1 Contact</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val">Zero</span>
+          <span class="ticker-sub">Clutter or AI Artifacts</span>
+        </div>
+        <!-- Duplicates for continuous stream -->
+        <div class="ticker-block">
+          <span class="ticker-val cyan">&lt; 0.8s</span>
+          <span class="ticker-sub">Sub-Second Global Latency</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val">100%</span>
+          <span class="ticker-sub">Bespoke Clean Code</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val indigo">60–120 FPS</span>
+          <span class="ticker-sub">Lag-Free on Old Hardware</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val cyan">Direct Line</span>
+          <span class="ticker-sub">WhatsApp 1-on-1 Contact</span>
+        </div>
+        <div class="ticker-block">
+          <span class="ticker-val">Zero</span>
+          <span class="ticker-sub">Clutter or AI Artifacts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STUDIO PHILOSOPHY ==================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head-split reveal">
+        <div>
+          <span class="section-tag">01 // The Studio</span>
+          <h2 class="section-heading">Why We Build Differently</h2>
+        </div>
+        <p class="section-subtext">
+          Most websites today feel either overloaded with laggy gimmicks or generated by generic AI bots that lack soul. At Nexifing, every pixel and interaction is purposefully engineered.
+        </p>
+      </div>
+
+      <div class="secondary-projects-grid">
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="font-size: 1.8rem; margin-bottom: 1rem;">🎯</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">Uncluttered & Direct</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            We strip away distraction and focus on high-impact hierarchy. Your visitors immediately understand what you do and how to take action.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="font-size: 1.8rem; margin-bottom: 1rem;">⚡</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">Hardware-Friendly Smoothness</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Whether viewed on a top-spec gaming desktop or a 6-year-old budget laptop, Nexifing websites glide smoothly without frame drops.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="font-size: 1.8rem; margin-bottom: 1rem;">📱</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">1-on-1 Direct Access</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            You have a direct line on WhatsApp (+201202000210) to the engineer building your site. No customer support queues, no delayed tickets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SELECTED WORK / PORTFOLIO ==================== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-head-split reveal" style="text-align: center; max-width: 680px; margin: 0 auto 2.5rem; flex-direction: column; align-items: center;">
+        <span class="section-tag">02 // Past Work</span>
+        <h2 class="section-heading">Featured Client Work</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          A full-stack, live production platform designed and engineered by Nexifing.
+        </p>
+      </div>
+
+      <!-- Compact, Centered PremiKeys Showcase Card -->
+      <article class="glass-panel premikeys-compact-card reveal">
+        <!-- Top Browser Strip -->
+        <div class="browser-header-strip">
+          <div class="browser-dots">
+            <span class="browser-dot b-red"></span>
+            <span class="browser-dot b-yellow"></span>
+            <span class="browser-dot b-green"></span>
+          </div>
+          <div class="browser-url-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>premikeys.vercel.app</span>
+          </div>
+          <div class="premikeys-live-indicator">
+            <span class="live-dot-pulse"></span>
+            <span>Live</span>
+          </div>
+        </div>
+
+        <!-- PremiKeys Logo Stage -->
+        <div class="premikeys-logo-stage">
+          <div class="logo-ambient-halo"></div>
+          <a href="https://premikeys.vercel.app/" target="_blank" rel="noopener noreferrer" title="Visit premikeys.vercel.app">
+            <img src="./assets/premikeys-logo.png" alt="PremiKeys Official Logo" class="premikeys-logo-img" />
+          </a>
+        </div>
+
+        <!-- PremiKeys Content & Details -->
+        <div class="premikeys-card-details">
+          <div class="showcase-kicker">Full-Stack E-Commerce Platform</div>
+          <h3 class="premikeys-card-title">PremiKeys</h3>
+          <p class="premikeys-card-desc">
+            Official digital software store for genuine license keys, Windows 11 activations, and software suites. Features verified manual payment fulfillment (InstaPay & Vodafone Cash) and instant order tracking.
+          </p>
+
+          <div class="showcase-features-list">
+            <div class="feature-check-row">
+              <span class="check-cyan">✓</span>
+              <span>Manual payment verification (InstaPay, Vodafone Cash, Bank Wire)</span>
+            </div>
+            <div class="feature-check-row">
+              <span class="check-cyan">✓</span>
+              <span>Order lookup portal by tracking ID with zero forced signup</span>
+            </div>
+            <div class="feature-check-row">
+              <span class="check-cyan">✓</span>
+              <span>Dynamic product catalog, discount codes, and instant cart</span>
+            </div>
+          </div>
+
+          <div class="tech-tag-row">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Prisma</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+
+          <div class="showcase-cta-bar" style="margin-top: 1rem;">
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Production Status: <strong>Live & Active</strong></span>
+            <a href="https://premikeys.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-open-live" id="btn-visit-premikeys">
+              <span>Visit Live Website</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== THE NEXIFING STANDARD (WHY US) ==================== -->
+  <section class="section" id="standard">
+    <div class="container">
+      <div class="section-head-split reveal">
+        <div>
+          <span class="section-tag">03 // The Comparison</span>
+          <h2 class="section-heading">The Nexifing Ascent Standard</h2>
+        </div>
+        <p class="section-subtext">
+          See the clear difference between generic agencies or automated AI builders and Nexifing's bespoke engineering.
+        </p>
+      </div>
+
+      <div class="comparison-grid reveal">
+        <!-- Outdated Way -->
+        <div class="comparison-box outdated">
+          <span class="comp-badge badge-bad">Generic Builders & Slow Agencies</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif;">The Outdated Approach</h3>
+          <div class="comp-list">
+            <div class="comp-item bad">✕ Generic AI templates that look identical to a hundred other sites</div>
+            <div class="comp-item bad">✕ Bloated WordPress themes with 4+ second load times and sluggish mobile scrolling</div>
+            <div class="comp-item bad">✕ Cluttered visuals, intrusive popups, and confusing visitor journeys</div>
+            <div class="comp-item bad">✕ Slow ticket systems or agency account managers where updates take weeks</div>
+          </div>
+        </div>
+
+        <!-- Nexifing Way -->
+        <div class="comparison-box nexifing">
+          <span class="comp-badge badge-good">The Nexifing Ascent</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif;">The Nexifing Standard</h3>
+          <div class="comp-list">
+            <div class="comp-item good">✓ 100% Bespoke design and custom code built around your specific brand identity</div>
+            <div class="comp-item good">✓ Ultra-clean architecture running at 60–120 FPS smoothly even on older machines</div>
+            <div class="comp-item good">✓ Direct, uncluttered layouts that drive conversions, sales, and qualified leads</div>
+            <div class="comp-item good">✓ Direct 1-on-1 WhatsApp collaboration with your engineer (+201202000210)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE SCOPE ESTIMATOR ==================== -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem;" class="reveal">
+        <span class="section-tag">04 // Interactive Tool</span>
+        <h2 class="section-heading">Configure Your Project Scope</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          Select your target build type and speed below to see estimated turnaround and launch on WhatsApp.
+        </p>
+      </div>
+
+      <div class="scope-calculator-card reveal">
+        <span style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 700;">Step 1: Select Website Type</span>
+        <div class="calc-options-grid">
+          <div class="calc-option-btn scope-type-btn selected" data-value="E-Commerce Platform (Like PremiKeys)">
+            <div style="font-size: 1.5rem; margin-bottom: 0.35rem;">🛒</div>
+            <div style="font-weight: 700; font-size: 0.95rem;">E-Commerce Platform</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Storefront, Catalog & Payments</div>
+          </div>
+
+          <div class="calc-option-btn scope-type-btn" data-value="High-Converting Landing Page">
+            <div style="font-size: 1.5rem; margin-bottom: 0.35rem;">🚀</div>
+            <div style="font-weight: 700; font-size: 0.95rem;">High-Converting Landing Page</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Single Page, Direct Inquiries</div>
+          </div>
+
+          <div class="calc-option-btn scope-type-btn" data-value="Full Brand / Corporate Platform">
+            <div style="font-size: 1.5rem; margin-bottom: 0.35rem;">🌐</div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Brand / Corporate Site</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Multi-Section Authority Presence</div>
+          </div>
+        </div>
+
+        <span style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 700; margin-top: 1rem; display: block;">Step 2: Desired Delivery Pace</span>
+        <div class="calc-options-grid" style="grid-template-columns: 1fr 1fr;">
+          <div class="calc-option-btn scope-speed-btn selected" data-value="Fast-Track Sprint (7–10 Days)">
+            <div style="font-weight: 700; font-size: 0.95rem;">⚡ Fast-Track Sprint</div>
+            <div style="font-size: 0.75rem; color: var(--nex-cyan); margin-top: 0.25rem;">Priority Delivery</div>
+          </div>
+
+          <div class="calc-option-btn scope-speed-btn" data-value="Standard Build (2–3 Weeks)">
+            <div style="font-weight: 700; font-size: 0.95rem;">🗓️ Standard Build</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Regular Pace</div>
+          </div>
+        </div>
+
+        <!-- Calculated Summary -->
+        <div class="calc-summary-strip">
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em; display: block;">Estimated Turnaround:</span>
+            <span id="calc-estimate-days" style="font-size: 1.35rem; font-weight: 800; font-family: 'Space Grotesk', sans-serif; color: var(--nex-cyan);">7–10 Business Days</span>
+          </div>
+
+          <a id="calc-send-wa" href="#" target="_blank" rel="noopener noreferrer" class="btn-nex-primary" style="padding: 0.75rem 1.75rem; font-size: 0.88rem;">
+            <span>Submit This Spec to WhatsApp →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAPABILITIES / SERVICES ==================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head-split reveal">
+        <div>
+          <span class="section-tag">05 // Capabilities</span>
+          <h2 class="section-heading">Full-Stack Digital Solutions</h2>
+        </div>
+        <p class="section-subtext">
+          Everything you need to establish an authoritative, high-converting digital storefront or business portal.
+        </p>
+      </div>
+
+      <div class="secondary-projects-grid">
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">01 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">Bespoke Website Development</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Clean, handcrafted code tailored specifically to your branding. Fully responsive on phones, tablets, and desktop monitors.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">02 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">E-Commerce & Digital Fulfillment</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Product catalogs, instant shopping cart logic, receipt upload portals, and local payment verification (InstaPay, Vodafone Cash).
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">03 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">Performance & Hardware Optimization</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Sub-second page speeds, Google PageSpeed 95+ scores, asset compression, and buttery 60fps scrolling on older laptops.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">04 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">UI/UX Redesign & Modernization</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Transform outdated, slow, or cluttered websites into modern, sleek web experiences that look world-class.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">05 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">SEO & Conversion Tuning</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Semantic HTML5, Open Graph social share cards, rapid indexation, and clear call-to-actions that convert visitors.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem;">
+          <div style="color: var(--nex-cyan); font-size: 1.5rem; margin-bottom: 1rem;">06 //</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">Continuous Care & WhatsApp Support</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Rapid content updates, product additions, domain configuration, and continuous peace of mind.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT & DIRECT WHATSAPP ==================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head-split reveal">
+        <div>
+          <span class="section-tag">06 // Direct Line</span>
+          <h2 class="section-heading">Let's Build Your Website</h2>
+        </div>
+        <p class="section-subtext">
+          Start a direct conversation with us today. We reply within minutes directly on WhatsApp.
+        </p>
+      </div>
+
+      <div class="contact-layout reveal">
+        
+        <!-- WhatsApp Direct Card -->
+        <div class="glass-panel contact-hero-whatsapp">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(37, 211, 102, 0.15); color: #25d366; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.35rem 0.85rem; border-radius: 999px; margin-bottom: 1.5rem;">
+              <span class="pulse-beacon" style="background: #25d366; box-shadow: 0 0 10px #25d366;"></span>
+              <span>Online • WhatsApp Fast Line</span>
+            </div>
+
+            <h3 style="font-size: 1.85rem; font-weight: 800; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.75rem;">
+              Direct WhatsApp Communication
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+              No waiting for email replies. Contact us with one tap on WhatsApp to talk about your website idea, timeline, or get an immediate estimate.
+            </p>
+
+            <div style="background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border-color); padding: 1.25rem; border-radius: 16px; margin-bottom: 1.5rem;">
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Phone & WhatsApp Number</span>
+              <div class="phone-badge-display">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#25d366">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+                </svg>
+                <span>+20 120 200 0210</span>
+              </div>
+              <span style="font-size: 0.8rem; color: #25d366;">⚡ Instant WhatsApp response</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20ready%20to%20build%20my%20website." target="_blank" rel="noopener noreferrer" class="btn-big-chat">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+            </svg>
+            <span>Start WhatsApp Chat Now →</span>
+          </a>
+        </div>
+
+        <!-- Custom Quick Spec Form -->
+        <div class="glass-panel" style="padding: 2.5rem;">
+          <h3 style="font-size: 1.35rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem;">
+            Instant WhatsApp Dispatch
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Fill in your name and idea. Clicking submit formats your message and launches it directly into WhatsApp for immediate discussion.
+          </p>
+
+          <form id="custom-inquiry-form">
+            <div class="form-group">
+              <label for="input-name" class="form-label">Your Name</label>
+              <input type="text" id="input-name" class="form-input" placeholder="e.g. Ayman" required />
+            </div>
+
+            <div class="form-group">
+              <label for="input-goal" class="form-label">Project Goal</label>
+              <select id="input-goal" class="form-input" style="cursor: pointer;">
+                <option value="New E-Commerce Store (like PremiKeys)">New E-Commerce Store (like PremiKeys)</option>
+                <option value="High-Converting Landing Page">High-Converting Landing Page</option>
+                <option value="Brand Website Redesign">Brand Website Redesign</option>
+                <option value="Custom Web Platform">Custom Web Platform</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="input-notes" class="form-label">Project Notes or Reference URLs</label>
+              <textarea id="input-notes" class="form-input" rows="4" placeholder="Briefly describe what you'd like your site to achieve, reference sites, or features needed..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-nex-primary" style="width: 100%; justify-content: center; cursor: pointer;">
+              <span>Send Directly to WhatsApp →</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="nav-brand">
+          <img src="./assets/nexifing-logo-dark.png" alt="Nexifing Logo" class="nav-logo-img nav-logo-dark" />
+          <img src="./assets/nexifing-logo.png" alt="Nexifing Logo" class="nav-logo-img nav-logo-light" />
+        </a>
+
+        <div class="nav-links" style="display: flex;">
+          <a href="#about" class="nav-link">Studio</a>
+          <a href="#portfolio" class="nav-link">Selected Work</a>
+          <a href="#services" class="nav-link">Capabilities</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-copy-row">
+        <div>
+          © 2026 Nexifing. Digital Elevation Studio. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="https://premikeys.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--nex-cyan); font-weight: 600;">
+            Featured Client: PremiKeys ↗
+          </a>
+          <a href="https://wa.me/201202000210" target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 600;">
+            WhatsApp: +201202000210
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="floating-whatsapp-widget" title="Direct WhatsApp Line">
+    <div class="whatsapp-pulse-ring"></div>
+    <span class="whatsapp-tooltip">Chat with Nexifing (+201202000210)</span>
+    <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20interested%20in%20building%20a%20website." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Start WhatsApp Chat">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to Top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="./script.js"></script>
+</body>
+</html>
