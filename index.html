@@ -146,7 +146,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
           </svg>
-          <span>Chat on WhatsApp (+20 120 200 0210)</span>
+          <span>Chat on WhatsApp<span class="hide-mobile-mini"> (+20 120 200 0210)</span></span>
         </a>
 
         <a href="#showcase" class="btn btn-outline" id="hero-btn-secondary">
@@ -661,41 +661,48 @@
       </div>
 
       <div class="contact-section-grid">
-        <!-- Left VIP Card -->
+        <!-- Left VIP Card: Direct WhatsApp Line -->
         <div class="automark-contact-box">
-          <div>
+          <div class="contact-box-content-top">
             <div class="online-status-chip">
               <span class="live-beacon"></span>
-              <span>Online • WhatsApp Fast-Line</span>
+              <span>Online • Direct WhatsApp Line</span>
             </div>
 
             <h3 class="contact-box-title">Direct WhatsApp Collaboration</h3>
             <p class="contact-box-desc">
-              Skip bureaucratic agency delays and ticket queues. Chat directly with the engineer building your site on WhatsApp to discuss your goals, share reference websites, and receive a tailored project estimate.
+              Skip bureaucratic agency delays and ticket queues. Chat directly with the lead engineer building your site to discuss goals, share references, and receive a tailored quote.
             </p>
 
-            <div class="whatsapp-hotline-card">
-              <span class="hotline-label">Direct Senior Developer Hotline</span>
+            <!-- Tappable Hotline Card for 1-Tap Mobile Chat -->
+            <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20ready%20to%20build%20my%20website." target="_blank" rel="noopener noreferrer" class="whatsapp-hotline-card" aria-label="Open WhatsApp chat with lead developer">
+              <div class="hotline-card-header">
+                <span class="hotline-label">Senior Engineer Direct Hotline</span>
+                <span class="hotline-badge-tap">Tap to Chat ⚡</span>
+              </div>
               <div class="hotline-number-row">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="#25d366">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#25d366" aria-hidden="true">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
                 </svg>
-                <span>+20 120 200 0210</span>
+                <span class="hotline-tel">+20 120 200 0210</span>
               </div>
               <span class="hotline-sub">⚡ Typical reply time under 15 minutes</span>
-            </div>
+            </a>
           </div>
 
           <a href="https://wa.me/201202000210?text=Hi%20Nexifing!%20I'm%20ready%20to%20build%20my%20website." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="contact-btn-wa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+            </svg>
             <span>Start WhatsApp Chat Now →</span>
           </a>
         </div>
 
-        <!-- Right Inquiry Form -->
+        <!-- Right VIP Card: Fast-Track Inquiry Form -->
         <div class="automark-contact-box">
-          <h3 class="contact-box-title" style="font-size: 1.5rem;">Fast-Track WhatsApp Inquiry</h3>
+          <h3 class="contact-box-title">Fast-Track WhatsApp Inquiry</h3>
           <p class="contact-box-desc">
-            Provide your project details below. Submitting automatically pre-formats your inquiry and opens a WhatsApp chat directly with our developer.
+            Submit your requirements below to instantly format a structured project brief and open a direct WhatsApp chat with our developer.
           </p>
 
           <form id="inquiry-form">
@@ -705,23 +712,30 @@
             </div>
 
             <div class="form-group-field">
-              <label for="form-type" class="form-group-label">Project Scope</label>
-              <select id="form-type" class="automark-input" style="cursor: pointer;">
-                <option value="E-Commerce Storefront (like PremiKeys)">E-Commerce Storefront (like PremiKeys)</option>
-                <option value="High-Converting Landing Page">High-Converting Landing Page</option>
-                <option value="Brand & Corporate Platform">Brand & Corporate Platform</option>
-                <option value="Custom Web Application (Next.js)">Custom Web Application (Next.js)</option>
-              </select>
+              <label class="form-group-label">Project Scope</label>
+              <div class="scope-chips-group" role="group" aria-label="Select Project Scope">
+                <button type="button" class="scope-chip active" data-value="E-Commerce Storefront (like PremiKeys)">🛒 E-Commerce</button>
+                <button type="button" class="scope-chip" data-value="High-Converting Landing Page">⚡ Landing Page</button>
+                <button type="button" class="scope-chip" data-value="Brand & Corporate Platform">🏢 Brand Platform</button>
+                <button type="button" class="scope-chip" data-value="Custom Web App (Next.js)">⚙️ Web App</button>
+              </div>
+              <input type="hidden" id="form-type" value="E-Commerce Storefront (like PremiKeys)" />
             </div>
 
             <div class="form-group-field">
-              <label for="form-notes" class="form-group-label">Project Vision / Specific Features</label>
-              <textarea id="form-notes" class="automark-input" rows="4" placeholder="Briefly describe what your website needs to achieve, any reference links, or target launch timeline..." required></textarea>
+              <label for="form-notes" class="form-group-label">Project Vision / Details</label>
+              <textarea id="form-notes" class="automark-input" rows="3" placeholder="Describe your site goals, reference links, or desired launch date..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1.1rem;" id="form-submit-btn">
-              <span>Send Directly to WhatsApp (+20 120 200 0210) →</span>
+            <button type="submit" class="btn btn-primary form-submit-btn" id="form-submit-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.29c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.54 1.55 2.4 3.61 2.4 5.79 0 4.51-3.68 8.19-8.19 8.19zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/>
+              </svg>
+              <span>Send Inquiry to WhatsApp →</span>
             </button>
+            <div class="form-security-note">
+              <span>⚡ Direct WhatsApp Dispatch • Under 15m Response</span>
+            </div>
           </form>
         </div>
       </div>

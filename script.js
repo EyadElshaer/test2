@@ -20,48 +20,49 @@ window.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-// --- 1. LENIS SMOOTH MOMENTUM SCROLLING ---
+// --- 1. LENIS SMOOTH MOMENTUM SCROLLING (DESKTOP GLIDE & NATIVE MOBILE) ---
 function initLenis() {
   if (typeof Lenis === 'undefined') {
     console.warn('Lenis library not loaded');
     return;
   }
 
-  // Optimize physics for mobile touch vs desktop wheel
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  // Detect touch devices (phones, tablets, touchscreens)
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
+  // On touchscreens/mobile devices, preserve native 120Hz hardware touch scrolling.
+  // Never hijack mobile touch events so scrolling feels natural and never overshoots.
+  if (isTouchDevice) {
+    lenis = null;
+    return;
+  }
+
+  // Desktop mouse-wheel smooth scrolling:
+  // Using lerp provides silky glide without momentum runaway or overshoot on weak scrolls.
   lenis = new Lenis({
-    duration: isTouchDevice ? 1.0 : 1.35,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    orientation: 'vertical',
-    gestureOrientation: 'vertical',
+    lerp: 0.08,
+    wheelMultiplier: 0.85,
     smoothWheel: true,
-    wheelMultiplier: 0.82,
-    touchMultiplier: 1.0,
-    syncTouch: true,
-    syncTouchLerp: 0.08,
-    infinite: false,
+    syncTouch: false,
+    autoResize: true,
   });
 
+  // Single dedicated animation loop (avoid duplicate ticks)
   function raf(time) {
-    lenis.raf(time);
+    if (lenis) {
+      lenis.raf(time);
+    }
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
 
-  // Sync GSAP ScrollTrigger with Lenis
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
+  // Sync GSAP ScrollTrigger if present
+  if (typeof ScrollTrigger !== 'undefined' && lenis) {
     lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
   }
 }
 
-// --- 2. SMOOTH ANCHOR SCROLLING WITH LENIS ---
+// --- 2. SMOOTH ANCHOR SCROLLING (LENIS ON DESKTOP, NATIVE ON MOBILE) ---
 function initSmoothAnchorScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach((link) => {
@@ -86,11 +87,15 @@ function initSmoothAnchorScroll() {
         if (lenis) {
           lenis.scrollTo(targetEl, {
             offset: offsetTop,
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            duration: 0.9,
           });
         } else {
-          targetEl.scrollIntoView({ behavior: 'smooth' });
+          const rect = targetEl.getBoundingClientRect();
+          const targetY = rect.top + window.pageYOffset + offsetTop;
+          window.scrollTo({
+            top: targetY,
+            behavior: 'smooth'
+          });
         }
       }
     });
@@ -287,27 +292,42 @@ function initMobileMenu() {
   }
 }
 
-// --- 7. WHATSAPP FAST-TRACK INQUIRY FORM ---
+// --- 7. WHATSAPP FAST-TRACK INQUIRY FORM & SCOPE SELECTOR ---
 function initContactForm() {
   const form = document.getElementById('inquiry-form');
+  const scopeChips = document.querySelectorAll('.scope-chip');
+  const scopeInput = document.getElementById('form-type');
+
+  // Interactive Scope Chips (one-tap mobile selection)
+  if (scopeChips.length && scopeInput) {
+    scopeChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        scopeChips.forEach((c) => c.classList.remove('active'));
+        chip.classList.add('active');
+        const selectedValue = chip.getAttribute('data-value') || chip.textContent.trim();
+        scopeInput.value = selectedValue;
+      });
+    });
+  }
+
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.getElementById('form-name')?.value.trim() || 'Client';
-    const type = document.getElementById('form-type')?.value || 'Custom Website';
-    const notes = document.getElementById('form-notes')?.value.trim() || '';
+    const type = scopeInput?.value || 'Custom Web Platform';
+    const notes = document.getElementById('form-notes')?.value.trim() || 'Ready to start our web project.';
 
     const text = `Hi Nexifing! My name is ${name}.
 
-I'm interested in building:
+I'm reaching out about a project:
 🚀 Scope: ${type}
 
-Project Details & Requirements:
+Project Vision & Details:
 ${notes}
 
-Looking forward to your feedback and getting a tailored quote!`;
+Looking forward to your thoughts and pricing!`;
 
     const encoded = encodeURIComponent(text);
     const waUrl = `https://wa.me/201202000210?text=${encoded}`;
@@ -315,3 +335,4 @@ Looking forward to your feedback and getting a tailored quote!`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   });
 }
+
