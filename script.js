@@ -185,23 +185,9 @@ function initSporeCanvas() {
   });
 }
 
-// --- 4. THEME SYSTEM ---
+// --- 4. THEME SYSTEM (PERMANENT DARK MODE) ---
 function initTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
-  const saved = localStorage.getItem('nexifing_theme') || 'dark';
-
-  if (saved === 'dark') {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('nexifing_theme', isDark ? 'dark' : 'light');
-    });
-  }
+  document.documentElement.classList.add('dark');
 }
 
 // --- 5. HEADER & SCROLL PROGRESS & BACK TO TOP ---
