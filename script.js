@@ -20,28 +20,20 @@ window.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-// --- 1. LENIS SMOOTH MOMENTUM SCROLLING (DESKTOP GLIDE & NATIVE MOBILE) ---
+// --- 1. LENIS SMOOTH MOMENTUM SCROLLING (LUXURIOUS SLOW INERTIAL GLIDE) ---
 function initLenis() {
   if (typeof Lenis === 'undefined') {
     console.warn('Lenis library not loaded');
     return;
   }
 
-  // Detect touch devices (phones, tablets, touchscreens)
-  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-  // On touchscreens/mobile devices, preserve native 120Hz hardware touch scrolling.
-  // Never hijack mobile touch events so scrolling feels natural and never overshoots.
-  if (isTouchDevice) {
-    lenis = null;
-    return;
-  }
-
-  // Desktop mouse-wheel smooth scrolling:
-  // Using lerp provides silky glide without momentum runaway or overshoot on weak scrolls.
+  // Smooth slow inertial glide:
+  // - lerp: 0.048 provides that slow, buttery, high-end studio inertia glide that decelerates smoothly.
+  // - wheelMultiplier: 0.8 keeps the distance per wheel notch controlled (~80px), so gentle/weak scrolls never overshoot.
+  // - syncTouch: false ensures touchscreens retain 100% native touch tracking without momentum fling.
   lenis = new Lenis({
-    lerp: 0.08,
-    wheelMultiplier: 0.85,
+    lerp: 0.048,
+    wheelMultiplier: 0.8,
     smoothWheel: true,
     syncTouch: false,
     autoResize: true,
@@ -87,7 +79,8 @@ function initSmoothAnchorScroll() {
         if (lenis) {
           lenis.scrollTo(targetEl, {
             offset: offsetTop,
-            duration: 0.9,
+            duration: 1.4,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           });
         } else {
           const rect = targetEl.getBoundingClientRect();
@@ -228,7 +221,10 @@ function initHeaderAndScroll() {
   if (backToTop) {
     backToTop.addEventListener('click', () => {
       if (lenis) {
-        lenis.scrollTo(0, { duration: 1.3 });
+        lenis.scrollTo(0, {
+          duration: 1.5,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
